@@ -12,4 +12,4 @@ Each of the different folders have altered versions of the generator that act di
  * Shifted - Same as orderly but every other column is shifted half a spot.
  
 ## Running the Generator
-To run the generator, simply open the folder you want to use and open index.html.
+To run the generator, simply open the folder you want to use and open index.html. Pressing F creates the art, and to make a new one press F again.
