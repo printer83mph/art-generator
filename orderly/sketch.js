@@ -102,7 +102,7 @@ function draw() {
 function keyPressed() {
   if(state === 0 && key === "F") {
     state = 1;
-  } else if(state === 3 && key === "F") {
+  } else if( state === 3 && key === "F") {
 		scrHue = random(100);
     state = 1;
   }
