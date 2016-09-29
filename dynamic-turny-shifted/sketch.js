@@ -1,5 +1,5 @@
 var state = 0;
-var scrHue = 0;
+var scrHue;
 var turnTimes;
 var avgScr;
 var currentTurtle;
@@ -90,6 +90,7 @@ function doArt() {
 
 function setup() {
   canvas = createCanvas(window.innerWidth, window.innerHeight);
+	scrHue = random(100);
 	frameRate(144);
   colorMode(HSB, 100);
   avgScr = (width+height)/2;
@@ -121,6 +122,7 @@ function keyPressed() {
   if(state === 0 && key === "F") {
     state = 1;
   } else if(state === 3 && key === "F") {
-    state = 0;
+		scrHue = random(100);
+    state = 1;
   }
 }

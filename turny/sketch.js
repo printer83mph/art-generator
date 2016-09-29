@@ -1,5 +1,5 @@
 var state = 0;
-var scrHue = 0;
+var scrHue;
 var turnTimes;
 var avgScr;
 var startAngle, turnAngle, turnDelay, density, width, hInit, sInit, bInit, hChange, sChange, bChange;
@@ -74,6 +74,7 @@ function doArt() {
 
 function setup() {
   canvas = createCanvas(window.innerWidth, window.innerHeight);
+	scrHue = random(100);
   colorMode(HSB, 100);
   avgScr = (width+height)/2;
   textAlign(CENTER);
@@ -91,6 +92,7 @@ function draw() {
     }
   } else if(state === 1) {
     background(scrHue,20,100);
+		strokeWeight(0);
     text("LOADING...", width/2, height/3);
     state = 2;
   } else if(state === 2) {
@@ -102,6 +104,7 @@ function keyPressed() {
   if(state === 0 && key === "F") {
     state = 1;
   } else if(state === 3 && key === "F") {
-    state = 0;
+		scrHue = random(100);
+    state = 1;
   }
 }
